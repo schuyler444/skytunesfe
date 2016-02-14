@@ -1,0 +1,116 @@
+
+body{
+	overflow: hidden;
+	font-family: "Avenir Black", sans-serif;
+}
+
+/* ----------------------login stuff ----------------------------------*/
+.loginBody {
+    background-image:url('skytunesopenning.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    color: #F0F0F0;
+    overflow: hidden;
+    font-family: "Avenir Black", sans-serif;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.login {
+	margin: auto;
+    width: 30%;
+    padding: 10px;
+	box-shadow: none;
+	outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 0;
+}
+
+.loginbutton{
+	color: black;
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #F0F0F0;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #F0F0F0;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #F0F0F0;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #F0F0F0;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #F0F0F0;
+}
+
+/* ----------------------userpage.html stuff ----------------------------------*/
+
+.userpage{
+	height:100%;
+    width:100%;
+	background-color: #F0F0F0;
+}
+
+ul.top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #001f3f;
+}
+
+li.top {
+    float: right;
+}
+
+li a.top {
+    display: block;
+    color: #F0F0F0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a.top:hover {
+    background-color: #003366;
+    color: #F0F0F0;
+}
+
+ul.side {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #001f3f;
+}
+
+li a.side {
+    display: block;
+    color: #F0F0F0;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a.side:hover {
+    background-color: #003366;
+    color: #F0F0F0;
+}
+
