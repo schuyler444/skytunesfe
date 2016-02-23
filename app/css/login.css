@@ -1,6 +1,6 @@
 
 body{
-	overflow: hidden;
+
 	font-family: "Avenir Black", sans-serif;
 }
 
@@ -60,57 +60,173 @@ body{
 
 /* ----------------------userpage.html stuff ----------------------------------*/
 
-.userpage{
-	height:100%;
-    width:100%;
-	background-color: #F0F0F0;
+.nav a {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
 }
 
-ul.top {
-    list-style-type: none;
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://wallpaperdj.com/wallpapers/blissed_out-1920x1080.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 30px;
+	font-weight: bold;
+  color: #fff;
+}
+
+.Albums-near-me{
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.Albums-near-me h2{
+    color:#393c3d;
+    font-size: 24px;
+
+}
+
+.Albums-near-me p{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+
+/*_________________*/
+#container {
+  height: auto;
+  min-height: 100%;
+	position: relative;
+}
+
+.albums {
+    list-style: none;
+    padding: 0 2%;
+}
+
+.album {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    width: 80%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #001f3f;
+    padding: 1em 2em;
 }
 
-li.top {
-    float: right;
+.track {
+  cursor: pointer;
 }
 
-li a.top {
-    display: block;
-    color: #F0F0F0;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a.top:hover {
-    background-color: #003366;
-    color: #F0F0F0;
-}
-
-ul.side {
-    list-style-type: none;
+.album .tracks {
     margin: 0;
+    padding: .5em 0 0 1.5em;
+}
+
+.album button.queue {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 0;
     padding: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #001f3f;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
-li a.side {
-    display: block;
-    color: #F0F0F0;
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
+.album .queue.add {
+    background-ima
+		ge: url('add.png');
 }
 
-/* Change the link color on hover */
-li a.side:hover {
-    background-color: #003366;
-    color: #F0F0F0;
+.album .queue.remove {
+    background-image: url('remove.png');
 }
 
+.album-title {
+    margin-right: 10px;
+}
+
+.playlist {
+    position: absolute;
+    width: 30%;
+    padding: 0 3%;
+    min-height: 100%;
+}
+
+nav {
+    width: 180px;
+    margin: auto;
+    padding: 0;
+}
+
+nav button.control {
+    text-indent: -9999px;
+    width: 55px;
+    height: 50px;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+		color: black;
+}
+
+nav button.play {
+    background: url('control_play_hover.png') center no-repeat;
+}
+
+nav button.play:hover {
+    background: url('control_play.png') center no-repeat;
+}
+
+nav button.pause {
+    background: url('control_pause.png') center no-repeat;
+}
+
+nav button.pause:hover {
+    background: url('control_pause_hover.png') center no-repeat;
+}
+
+nav button.prev {
+    background: url('control_start_hover.png') center no-repeat;
+}
+
+nav button.prev:hover {
+    background: url('control_start.png') center no-repeat;
+}
+
+nav button.next {
+    background: url('control_end_hover.png') center no-repeat;
+}
+
+nav button.next:hover {
+    background: url('control_end.png') center no-repeat;
+}
+
+.library {
+	margin-left: 36%;
+	padding: 0.1em 2%;
+}

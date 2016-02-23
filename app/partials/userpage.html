@@ -1,15 +1,95 @@
 <div class = "userpage">
-<ul class = "top">
-  <li class = "top"><a class = "top" href="default.asp">Home</a></li>
-  <li class = "top"><a class = "top" href="news.asp">News</a></li>
-  <li class = "top"><a  class = "top"href="contact.asp">Contact</a></li>
-  <li class = "top"><a class = "top" href="about.asp">About</a></li>
-</ul>
+  <div class = "nav">
+    <div class = "container">
+      <ul class = "pull-left">
+        <li><a href="#">SkyTunes</a></li>
+        <li><a href="#">Browse</a></li>
+      </ul>
+      <ul class="pull-right">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+      </div>
+  </div>
 
-<ul class = "side">
-  <li class = "side"><a class = "side" href="default.asp">Home</a></li>
-  <li class = "side"><a class = "side" href="news.asp">News</a></li>
-  <li class = "side"><a  class = "side"href="contact.asp">Contact</a></li>
-  <li class = "side"><a class = "side" href="about.asp">About</a></li>
-</ul>
+  <div class = "jumbotron">
+    <duv class = "container">
+      <h1>SkyTunes</h1>
+      <p>The music at your finger tips<p>
+  </div>
+
+  <div class = "Albums-near-me">
+    <div class = "container">
+      <h2>Albums in my Cloud</h2>
+      <div class = "row">
+           <div class = "col-md-4">
+               <div class = "thumbnail">
+                   <img src="http://hypebeast.com/image/2009/04/dust-la-rock-art-nyc-1.jpg">
+               </div>
+
+               <div class = "thumbnail">
+                   <img src ="http://img.aceshowbiz.com/images/news/drake-unleashes-nothing-was-the-same-album-cover.jpg">
+               </div>
+
+           </div>
+
+           <div class = "col-md-4">
+               <div class = "thumbnail">
+                   <img src="http://cdn.pitchfork.com/news/51403/18306fb8.jpg">
+               </div>
+
+               <div class = "thumbnail">
+                   <img src ="http://www.billboard.com/files/styles/gallery_main_well/public/media/04-Fetty-Wap-Fetty-Wap-best-album-art-2015-billboard-1500.jpg">
+               </div>
+           </div>
+
+           <div class = "col-md-4">
+               <div class = "thumbnail">
+                   <img src ="http://cdn.pastemagazine.com/www/system/images/photo_albums/albums-gallery/large/twenty-one-pilots---blurryface.png?1384968217">
+               </div>
+           </div>
+
+       </div>
+    </div>
+  </div>
+
+<divng-controller="TunesCtrl">
+  <div id="container">
+    <div class="playlist">
+      <h1>Playlist</h1>
+      <nav>
+        <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
+        <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
+        <button class="control prev" ng-click="player.previous()">Prev</button>
+        <button class="control next" ng-click="player.next()">Next</button>
+      </nav>
+      <ul class="albums">
+        <li class="album" ng-repeat="album in player.playlist"
+            ng-class="{current: player.current.album == $index}">
+          <button class="queue remove" ng-click="player.playlist.remove(album)"></button>
+          <span class="album-title">{{album.title}}</span>
+          <span class="artist-name">{{album.artist}}</span>
+          <ol class="tracks">
+            <li ng-repeat="track in album.tracks" class="track"
+                ng-class="{current: player.current.track == $index}"
+                ng-click="player.play($index, $parent.$index)">{{track.title}}</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <section class="library">
+      <h1>Music Library</h1>
+      <ul class="albums">
+        <li class="album current" ng-repeat="album in albums">
+          <button class="queue add" ng-click="player.playlist.add(album)"></button>
+          <span class="album-title">{{album.title}}</span>
+          <span class="artist-name">{{album.artist}}</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+</div>
+
 </div>
