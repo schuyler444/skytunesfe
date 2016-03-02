@@ -1,0 +1,296 @@
+
+body{
+
+	font-family: "Avenir Black", sans-serif;
+}
+
+/* ----------------------login stuff ----------------------------------*/
+.loginBody {
+    background-image:url('skytunesopenning.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    color: #F0F0F0;
+    overflow: hidden;
+    font-family: "Avenir Black", sans-serif;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.login {
+	margin: auto;
+    width: 30%;
+    padding: 10px;
+	box-shadow: none;
+	outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 0;
+}
+
+.loginbutton{
+	color: black;
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #F0F0F0;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #F0F0F0;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #F0F0F0;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #F0F0F0;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #F0F0F0;
+}
+
+/* ----------------------userpage.html stuff ----------------------------------*/
+
+.nav a {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+. {
+  display: inline;
+}
+
+.jumbotron {
+  /*background-image:url('http://wallpaperdj.com/wallpapers/blissed_out-1920x1080.jpg');*/
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 30px;
+	font-weight: bold;
+  color: #fff;
+}
+
+.Albums-near-me{
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.Albums-near-me h2{
+    color:#393c3d;
+    font-size: 24px;
+
+}
+
+.Albums-near-me p{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+
+/*_________________*/
+#container {
+  height: auto;
+  min-height: 100%;
+	position: relative;
+}
+
+.albums {
+    list-style: none;
+    padding: 0 2%;
+}
+
+.album {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    margin: 0;
+    padding: 1em 2em;
+}
+
+.track {
+  cursor: pointer;
+}
+
+.album .tracks {
+    margin: 0;
+    padding: .5em 0 0 1.5em;
+}
+
+.album button.queue {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.album .queue.add {
+    background-ima
+		ge: url('add.png');
+}
+
+.album .queue.remove {
+    background-image: url('remove.png');
+}
+
+.album-title {
+    margin-right: 10px;
+}
+
+.playlist {
+    position: absolute;
+    width: 30%;
+    padding: 0 3%;
+    min-height: 100%;
+}
+
+nav {
+    width: 180px;
+    margin: auto;
+    padding: 0;
+}
+
+nav button.control {
+    text-indent: -9999px;
+    width: 55px;
+    height: 50px;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+		color: black;
+}
+
+nav button.play {
+    background: url('control_play_hover.png') center no-repeat;
+}
+
+nav button.play:hover {
+    background: url('control_play.png') center no-repeat;
+}
+
+nav button.pause {
+    background: url('control_pause.png') center no-repeat;
+}
+
+nav button.pause:hover {
+    background: url('control_pause_hover.png') center no-repeat;
+}
+
+nav button.prev {
+    background: url('control_start_hover.png') center no-repeat;
+}
+
+nav button.prev:hover {
+    background: url('control_start.png') center no-repeat;
+}
+
+nav button.next {
+    background: url('control_end_hover.png') center no-repeat;
+}
+
+nav button.next:hover {
+    background: url('control_end.png') center no-repeat;
+}
+
+.library {
+	margin-left: 36%;
+	padding: 0.1em 2%;
+}
+
+.sidebar {
+    position : absolute;
+    top : 0;
+    left : -160px;;
+    transition : 100ms left;
+}
+#navigation-toggle {
+        position : absolute;
+        left : 160px;
+        background : rgba(3,159,244,.95);
+        color : white;
+        text-decoration : none;
+        padding : 20px;
+}
+.show {
+    left : 0;
+}
+.navigation {
+    list-style : none;
+    padding : 0;
+    margin : 0;
+}
+.navigation-items a {
+    display : block;
+    background-color : #444;
+    color : white;
+    line-height : 2em;
+    text-decoration : none;
+    padding : 10px 30px;
+    width : 100px;
+
+}
+
+.horizontal {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.horizontal > div { display: inline-block; float: none; }
+
+.horizontal > div:first-child { margin-left: 0; }
+
+div.row-fluid img{
+
+    width:  300px;
+    height: 300px;
+
+}
+
+div.Albums-near-me img {
+	width:  300px;
+	height: 300px;
+	position: relative;
+
+}
+
+p { white-space: normal; }

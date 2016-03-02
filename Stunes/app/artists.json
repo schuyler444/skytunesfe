@@ -1,0 +1,184 @@
+[
+{   "artist": "Kanye",
+    "albums":[{
+
+            "title": "The Life of Pablo",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "tracks": [{
+                "title": "Highlights",
+                "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
+            },
+            {
+                "title": "I Miss The Old Kanye OG",
+                "url": "music/I Miss The Old Kanye OG.mp3"
+
+            }]
+        },
+        {
+            "title": "Graduation",
+            "cover": "img/Graduation_(album).jpg",
+            "tracks": [{
+                "title": "Homecoming",
+                "url": "music/12 Homecoming  (feat. Chris Martin).m4a"
+            },
+            {
+                "title": "I Wonder",
+                "url": "music/04 I Wonder.m4a"
+
+            }]
+
+        },
+        {
+            "title": "Late Registration",
+            "cover": "img/Late_registration_cd_cover.jpg",
+            "tracks": [{
+                "title": "Gone",
+                "url": "music/19 Gone (ft.Consequence & Cam'Ron).mp3"
+            },
+            {
+                "title": "Late",
+                "url": "21 Late (Hidden Track).mp3"
+
+            }]
+        }]
+
+},
+
+{   "artist": "Kanye222",
+    "albums":[{
+
+          "title": "Graduation",
+          "cover": "img/Graduation_(album).jpg",
+          "tracks": [{
+              "title": "Homecoming",
+              "url": "music/12 Homecoming  (feat. Chris Martin).m4a"
+          },
+          {
+              "title": "I Wonder",
+              "url": "music/04 I Wonder.m4a"
+
+          }]
+
+      },
+      {
+            "title": "The Life of Pablo",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "tracks": [{
+                "title": "Highlights",
+                "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
+            },
+            {
+                "title": "I Miss The Old Kanye OG",
+                "url": "music/I Miss The Old Kanye OG.mp3"
+
+            }]
+        },
+        {
+            "title": "Late Registration",
+            "cover": "img/Late_registration_cd_cover.jpg",
+            "tracks": [{
+                "title": "Gone",
+                "url": "music/19 Gone (ft.Consequence & Cam'Ron).mp3"
+            },
+            {
+                "title": "Late",
+                "url": "21 Late (Hidden Track).mp3"
+
+            }]
+        }]
+
+},
+
+{   "artist": "Kanye333",
+    "albums":[{
+
+            "title": "The Life of Pablo",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "tracks": [{
+                "title": "Highlights",
+                "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
+            },
+            {
+                "title": "I Miss The Old Kanye OG",
+                "url": "music/I Miss The Old Kanye OG.mp3"
+
+            }]
+        },
+        {
+            "title": "Graduation",
+            "cover": "img/Graduation_(album).jpg",
+            "tracks": [{
+                "title": "Homecoming",
+                "url": "music/12 Homecoming  (feat. Chris Martin).m4a"
+            },
+            {
+                "title": "I Wonder",
+                "url": "music/04 I Wonder.m4a"
+
+            }]
+
+        },
+        {
+            "title": "Late Registration",
+            "cover": "img/Late_registration_cd_cover.jpg",
+            "tracks": [{
+                "title": "Gone",
+                "url": "music/19 Gone (ft.Consequence & Cam'Ron).mp3"
+            },
+            {
+                "title": "Late",
+                "url": "21 Late (Hidden Track).mp3"
+
+            }]
+        }]
+
+},
+
+{   "artist": "Kanye44",
+    "albums":[{
+
+            "title": "The Life of Pablo",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "tracks": [{
+                "title": "Highlights",
+                "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
+            },
+            {
+                "title": "I Miss The Old Kanye OG",
+                "url": "music/I Miss The Old Kanye OG.mp3"
+
+            }]
+        },
+        {
+            "title": "Graduation",
+            "cover": "img/Graduation_(album).jpg",
+            "tracks": [{
+                "title": "Homecoming",
+                "url": "music/12 Homecoming  (feat. Chris Martin).m4a"
+            },
+            {
+                "title": "I Wonder",
+                "url": "music/04 I Wonder.m4a"
+
+            }]
+
+        },
+        {
+            "title": "Late Registration",
+            "cover": "img/Late_registration_cd_cover.jpg",
+            "tracks": [{
+                "title": "Gone",
+                "url": "music/19 Gone (ft.Consequence & Cam'Ron).mp3"
+            },
+            {
+                "title": "Late",
+                "url": "21 Late (Hidden Track).mp3"
+
+            }]
+        }]
+
+}
+
+
+
+]
