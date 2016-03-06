@@ -49,8 +49,8 @@
         </div>
         <div class="row-fluid" ng-repeat = "artist in artists">
           <div class="span4" >
-            <img ng-src="{{artist.albums[1].cover}}">
-            <h3>{{artist.artist}}</h3>
+            <img ng-click="player.artist.set(artist)" ng-src="{{artist.albums[0].cover}}">
+            <h3 ng-click="player.artist.set(artist)">{{artist.artist}}</h3>
 
         </div>
       </div>
@@ -60,13 +60,8 @@
       </div><!--/span-->
     </div><!--/row-->
   </div>
-</div>
 
-    <hr>
 
-    <footer>
-
-    </footer>
 
 <!--
   <div class = "Albums-near-me">
@@ -105,41 +100,30 @@
   </div>
 -->
 
-  <div id="container" class ="userpage">
-        <div class="playlist">
-          <h1>Playlist</h1>
-          <nav>
-            <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
-            <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
-            <button class="control prev" ng-click="player.previous()">Prev</button>
-            <button class="control next" ng-click="player.next()">Next</button>
-          </nav>
-          <ul class="albums">
-            <li class="album" ng-repeat="album in player.playlist"
-                ng-class="{current: player.current.album == $index}">
-              <button class="queue remove" ng-click="player.playlist.remove(album)"></button>
-              <span class="album-title">{{album.title}}</span>
-              <span class="artist-name">{{album.artist}}</span>
-              <ol class="tracks">
-                <li ng-repeat="track in album.tracks" class="track"
-                    ng-class="{current: player.current.track == $index}"
-                    ng-click="player.play($index, $parent.$index)">{{track.title}}</li>
-              </ol>
-            </li>
-          </ul>
-        </div>
-        <section class="library">
-          <h1>Music Library</h1>
-          <ul class="albums">
-            <li class="album current" ng-repeat="album in albums">
-              <button class="queue add" ng-click="player.playlist.add(album)"></button>
-              <span class="album-title">{{album.title}}</span>
-              <span class="artist-name">{{album.artist}}</span>
-            </li>
-          </ul>
-        </section>
+  <div class ="container-fluid userpage">
+
+
+      <div class = "container">
+        
+             <div class = "row" ng-repeat="album in player.artist[0].albums">
+                 <div class = "col-md-6">
+                    <img ng-src="{{album.cover}}">
+                    
+                 </div>
+                 <div class = "col-md-6" >
+                    <button ng-repeat = "track in album.tracks" ng-click = "player.playlist.add(player.artist[0],album,track)">{{track.title}}</button>
+                 </div>
+             </div>
+
+         
       </div>
 
 
-
+</div>
+  <nav class="playbar" data-spy="affix" >
+    <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
+    <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
+    <button class="control prev" ng-click="player.previous()">Prev</button>
+    <button class="control next" ng-click="player.next()">Next</button>
+  </nav>
 </div>
