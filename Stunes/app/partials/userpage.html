@@ -111,7 +111,9 @@
                     
                  </div>
                  <div class = "col-md-6" >
-                    <button ng-repeat = "track in album.tracks" ng-click = "player.playlist.add(player.artist[0],album,track)">{{track.title}}</button>
+                    <div ng-repeat = "track in album.tracks" >
+                    <button ng-click = "player.playlist.add(player.artist[0],album,track)">{{track.title}}</button><br>
+                    </div>
                  </div>
              </div>
 
