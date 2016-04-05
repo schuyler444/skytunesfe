@@ -1,0 +1,24 @@
+<div class = "userpage">
+  <div class = "nav">
+    <div class = "container">
+      <ul class = "pull-left">
+        <li><a href ="#/userpage">Home</a></li>
+        <li><a href="#">Browse</a></li>
+      </ul>
+      <ul class="pull-right">
+        <li><a href="#">About</a></li>
+        <li><a href ="#/upload">Upload</a></li>
+      </ul>
+      </div>
+  </div>
+
+<div class = "fileUpload btn btn-primary btn-lg outline">
+    <span>Drag or Click to Upload</span>
+    <input id ="uploadBtn" type="file" class="upload" ng-model="someName" ng-change="newfile()" multiple /><br>
+    <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+</div>
+
+<script> document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value.substring(12);
+};
+</script>

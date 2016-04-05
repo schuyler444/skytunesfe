@@ -3,7 +3,7 @@
     "albums":[{
 
             "title": "The Life of Pablo",
-            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).jpg",
             "tracks": [{
                 "title": "Highlights",
                 "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
@@ -62,7 +62,7 @@
       },
       {
             "title": "The Life of Pablo",
-            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).jpg",
             "tracks": [{
                 "title": "Highlights",
                 "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
@@ -93,7 +93,7 @@
     "albums":[{
 
             "title": "The Life of Pablo",
-            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).jpg",
             "tracks": [{
                 "title": "Highlights",
                 "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"
@@ -138,7 +138,7 @@
     "albums":[{
 
             "title": "The Life of Pablo",
-            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).png",
+            "cover": "img/The_Life_of_Pablo_(Tidal_Front_Cover).jpg",
             "tracks": [{
                 "title": "Highlights",
                 "url": "music/Highlights (feat. Young Thug) [OG FULL].mp3"

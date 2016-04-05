@@ -1,4 +1,4 @@
-var skytunes = angular.module('skytunes', ['ngRoute',]);
+var skytunes = angular.module('skytunes', ['ngRoute','ngAnimate']);
 
 skytunes.config(function($routeProvider){
       $routeProvider
@@ -8,27 +8,44 @@ skytunes.config(function($routeProvider){
 
           .when('/userpage',{
                 templateUrl: 'partials/userpage.html'
+          })
+
+          .when('/upload',{
+                templateUrl: 'partials/upload.html'
           });
 });
 
-var playing = false;
 
-skytunes.controller('skytunesController', function($scope,$http, player) {
 
-    $http.get("artists.json")
-    .then(function(response) {
-        $scope.artists= response.data;
-    });
+
+
+
+skytunes.controller('skytunesController', function($scope,$http, player, $timeout) {
+
+    $scope.artists=[];
+
+    $timeout(function() {
+      $http.get("artists.json")
+      .then(function(response) {
+          $scope.artists= response.data;
+      });
+    },250);
+
+    $http.get("friends.json")
+      .then(function(response) {
+          $scope.friends= response.data;
+      });
 
     $scope.player = player;
    
 });
 
-  skytunes.factory('player', function(audio, $rootScope) {
+  skytunes.factory('player', function(audio, $rootScope, $timeout) {
     var player,
         playlist = [],
         paused = false,
         artist = [];
+        show = false;
         current = {
           album: 0,
           track: 0
@@ -53,6 +70,7 @@ skytunes.controller('skytunesController', function($scope,$http, player) {
         if (!paused) audio.src = playlist[0].albums[current.album].tracks[current.track].url;
         audio.play();
         player.playing = true;
+        player.show = true;
         paused = false;
       },
 
@@ -79,6 +97,7 @@ skytunes.controller('skytunesController', function($scope,$http, player) {
             audio.pause();
             audio.src = "";
             player.playing = false;
+            player.show = false;
             paused = true;
           }else {
             current.album++;
@@ -101,6 +120,7 @@ skytunes.controller('skytunesController', function($scope,$http, player) {
             audio.pause();
             audio.src = "";
             player.playing = false;
+            player.show= false;
             paused = true;
           }else{
             current.album--;
@@ -131,7 +151,10 @@ skytunes.controller('skytunesController', function($scope,$http, player) {
 
     artist.set = function(artst) {
       artist.pop();
-      artist.push(artst);
+      $timeout(function() {
+        artist.push(artst);
+      },250);
+      
     }
 
     audio.addEventListener('ended', function() {

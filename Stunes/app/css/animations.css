@@ -1,0 +1,20 @@
+.album_animations.ng-move,
+.album_animations.ng-enter,
+.album_animations.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.album_animations.ng-leave.ng-leave-active,
+.album_animations.ng-move,
+.album_animations.ng-enter {
+  opacity:0;
+}
+
+.album_animations.ng-leave,
+.album_animations.ng-move.ng-move-active,
+.album_animations.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+

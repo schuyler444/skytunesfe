@@ -1,53 +1,27 @@
-<!--
-<div class="container">
-    <div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
-        <a href="#" id="navigation-toggle" ng-click="toggleState()">Navigation</a>
-        <ul class="navigation">
-            <li class="navigation-items"> <a href="/">Link1</a> </li>
-            <li class="navigation-items"> <a href="/">Link2</a> </li>
-            <li class="navigation-items"> <a href="/">Link3</a> </li>
-            <li class="navigation-items"> <a href="/">Link4</a> </li>
-            <li class="navigation-items"> <a href="/">Link4</a> </li>
-        </ul>
-    </div>
-</div>
--->
-
 <div class = "userpage">
   <div class = "nav">
     <div class = "container">
       <ul class = "pull-left">
-        <li><a href="#">SkyTunes</a></li>
+        <li><a href ="#/userpage">Home</a></li>
         <li><a href="#">Browse</a></li>
       </ul>
       <ul class="pull-right">
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href ="#/upload">Upload</a></li>
       </ul>
       </div>
   </div>
 
-
-
-<!--<script src="sidebar.js"></script>-->
-
-<!--
-  <div class = "jumbotron">
-    <duv class = "container">
-      <h1>SkyTunes</h1>
-      <p>The music at your finger tips<p>
-  </div>
--->
-
+<div class="Albums-near-me">
 <h1>Artists in Your Cloud: </h1>
 <div class="container-fluid">
     <div class="row-fluid">
       <div class="span4 horizontal">
         <div class="hero-unit" id="first">
-
         </div>
-        <div class="row-fluid" ng-repeat = "artist in artists">
+
+
+        <div class="row-fluid album_animations" ng-repeat = "artist in artists">
           <div class="span4" >
             <img ng-click="player.artist.set(artist)" ng-src="{{artist.albums[0].cover}}">
             <h3 ng-click="player.artist.set(artist)">{{artist.artist}}</h3>
@@ -56,76 +30,67 @@
       </div>
 
 
-
       </div><!--/span-->
     </div><!--/row-->
   </div>
+</div>
 
+  <div class ="container-fluid track-disp">
 
-
-<!--
-  <div class = "Albums-near-me">
-    <div class = "container">
-      <h2>Albums in my Cloud</h2>
-      <div class = "row">
-           <div class = "col-md-4">
-               <div class = "thumbnail">
-                   <img src="http://hypebeast.com/image/2009/04/dust-la-rock-art-nyc-1.jpg">
-               </div>
-
-               <div class = "thumbnail">
-                   <img src ="http://img.aceshowbiz.com/images/news/drake-unleashes-nothing-was-the-same-album-cover.jpg">
-               </div>
-
-           </div>
-
-           <div class = "col-md-4">
-               <div class = "thumbnail">
-                   <img src="http://cdn.pitchfork.com/news/51403/18306fb8.jpg">
-               </div>
-
-               <div class = "thumbnail">
-                   <img src ="http://www.billboard.com/files/styles/gallery_main_well/public/media/04-Fetty-Wap-Fetty-Wap-best-album-art-2015-billboard-1500.jpg">
-               </div>
-           </div>
-
-           <div class = "col-md-4">
-               <div class = "thumbnail">
-                   <img src ="http://cdn.pastemagazine.com/www/system/images/photo_albums/albums-gallery/large/twenty-one-pilots---blurryface.png?1384968217">
-               </div>
-           </div>
-
-       </div>
-    </div>
-  </div>
--->
-
-  <div class ="container-fluid userpage">
-
-
+    
       <div class = "container">
-        
-             <div class = "row" ng-repeat="album in player.artist[0].albums">
-                 <div class = "col-md-6">
+
+             <div class = "row album_animations" ng-repeat="album in player.artist[0].albums">
+                <h1 ng-if="$index ==0">{{player.artist[0].artist}}   </h1>
+                 <div class = "col-sm-6">
                     <img ng-src="{{album.cover}}">
-                    
+
                  </div>
-                 <div class = "col-md-6" >
-                    <div ng-repeat = "track in album.tracks" >
-                    <button ng-click = "player.playlist.add(player.artist[0],album,track)">{{track.title}}</button><br>
+                 <div class = "col-sm-6 tracks" >
+                   <h3>{{album.title}}</h3>
+                    <div >
+                      <ul>
+                        <li ng-repeat = "track in album.tracks" ><button ng-click = "player.playlist.add(player.artist[0],album,track)">{{track.title}}</button></li>
+                      </ul>
                     </div>
                  </div>
              </div>
 
-         
+
       </div>
 
 
+
 </div>
+
   <nav class="playbar" data-spy="affix" >
+    <div class = "col-sm-4" >
     <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
     <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
     <button class="control prev" ng-click="player.previous()">Prev</button>
     <button class="control next" ng-click="player.next()">Next</button>
+  </div>
+  <div class = "col-sm-4" >
+  {{player.playlist[0].albums[player.current.album].tracks[player.current.track].title}}
+  <br>
+     {{player.playlist[0].albums[player.current.album].title}}
+  <br>
+    {{player.playlist[0].artist}} 
+
+
+  </div>
+  <div class = "col-sm-4" "mini-album" >
+
+      <img ng-src={{player.playlist[0].albums[player.current.album].cover}} ng-show="player.show">
+  </div>
+
   </nav>
 </div>
+
+<!--
+
+
+-->
+
+
+
