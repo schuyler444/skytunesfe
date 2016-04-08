@@ -10,6 +10,10 @@ skytunes.config(function($routeProvider){
                 templateUrl: 'partials/userpage.html'
           })
 
+          .when('/friendspage',{
+                templateUrl: 'partials/friendspage.html'
+          })
+
           .when('/upload',{
                 templateUrl: 'partials/upload.html'
           });
@@ -21,6 +25,8 @@ skytunes.config(function($routeProvider){
 
 
 skytunes.controller('skytunesController', function($scope,$http, player, $timeout) {
+
+    console.log("Hi");
 
     $scope.artists=[];
 
@@ -37,6 +43,27 @@ skytunes.controller('skytunesController', function($scope,$http, player, $timeou
       });
 
     $scope.player = player;
+
+    $scope.name = "Your";
+
+    $scope.changeMusic = function(nme){
+      $http.get("billartist.json")
+      .then(function(response) {
+          $scope.artists= response.data;
+      });
+      $scope.name = nme.name + "'s";
+      player.artist.pop();
+
+    };
+
+    $scope.returnMusic = function(){
+      $http.get("artists.json")
+      .then(function(response) {
+          $scope.artists= response.data;
+      });
+      $scope.name = "Your";
+      player.artist.pop();
+    };
    
 });
 

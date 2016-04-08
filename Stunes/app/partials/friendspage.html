@@ -1,0 +1,57 @@
+
+<div class = "userpage">
+  <div class = "nav">
+    <div class = "container">
+      <ul class = "pull-left">
+        <li><a href ="#/userpage">Music</a></li>
+        <li><a href ="#/userpage" ng-click = "returnMusic()">My Music</a></li>
+        <li><a href="#/friendspage">Friends</a></li>
+      </ul>
+      <ul class="pull-right">
+        <li><a href="#">About</a></li>
+        <li><a href ="#/upload">Upload</a></li>
+      </ul>
+      </div>
+  </div>
+
+
+
+ <div class = "friendsGrid container-fluid">
+ 	<h1>{{name}} Friends: </h1> <label>Search: <input ng-model="searchText"></label>
+
+	 <div class = "row " >
+	     <div class="col-sm-3 col-md-2 album_animations" ng-repeat="friend in friends| filter:searchText">
+      		<a class = "friendName" href ="#/userpage" ng-click="changeMusic(friend)"><img  ng-src="{{friend.photo}}" ng-click="changeMusic(friend.name)" >
+      		<h4 href ="#/userpage" ng-click="changeMusic(friend.name)">{{friend.name}}</h4></a>
+	        
+    	</div>
+
+	</div>
+
+</div>
+
+<div>
+
+	<nav class="playbar" data-spy="affix" >
+    <div class = "col-sm-4" >
+    <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
+    <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
+    <button class="control prev" ng-click="player.previous()">Prev</button>
+    <button class="control next" ng-click="player.next()">Next</button>
+  </div>
+  <div class = "col-sm-4" >
+  {{player.playlist[0].albums[player.current.album].tracks[player.current.track].title}}
+  <br>
+     {{player.playlist[0].albums[player.current.album].title}}
+  <br>
+    {{player.playlist[0].artist}} 
+
+
+  </div>
+  <div class = "col-sm-4" "mini-album" >
+
+      <img ng-src={{player.playlist[0].albums[player.current.album].cover}} ng-show="player.show">
+  </div>
+
+  </nav>
+</div>

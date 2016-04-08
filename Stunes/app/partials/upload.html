@@ -2,8 +2,9 @@
   <div class = "nav">
     <div class = "container">
       <ul class = "pull-left">
-        <li><a href ="#/userpage">Home</a></li>
-        <li><a href="#">Browse</a></li>
+        <li><a href ="#/userpage">Music</a></li>
+        <li><a href ="#/userpage" ng-click = "returnMusic()">My Music</a></li>
+        <li><a href="#/friendspage">Friends</a></li>
       </ul>
       <ul class="pull-right">
         <li><a href="#">About</a></li>
@@ -16,6 +17,32 @@
     <span>Drag or Click to Upload</span>
     <input id ="uploadBtn" type="file" class="upload" ng-model="someName" ng-change="newfile()" multiple /><br>
     <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+</div>
+
+<div>
+
+  <nav class="playbar" data-spy="affix" >
+    <div class = "col-sm-4" >
+    <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
+    <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
+    <button class="control prev" ng-click="player.previous()">Prev</button>
+    <button class="control next" ng-click="player.next()">Next</button>
+  </div>
+  <div class = "col-sm-4" >
+  {{player.playlist[0].albums[player.current.album].tracks[player.current.track].title}}
+  <br>
+     {{player.playlist[0].albums[player.current.album].title}}
+  <br>
+    {{player.playlist[0].artist}} 
+
+
+  </div>
+  <div class = "col-sm-4" "mini-album" >
+
+      <img ng-src={{player.playlist[0].albums[player.current.album].cover}} ng-show="player.show">
+  </div>
+
+  </nav>
 </div>
 
 <script> document.getElementById("uploadBtn").onchange = function () {

@@ -2,8 +2,9 @@
   <div class = "nav">
     <div class = "container">
       <ul class = "pull-left">
-        <li><a href ="#/userpage">Home</a></li>
-        <li><a href="#">Browse</a></li>
+        <li><a href ="#/userpage">Music</a></li>
+        <li><a href ="#/userpage" ng-click = "returnMusic()">My Music</a></li>
+        <li><a href="#/friendspage">Friends</a></li>
       </ul>
       <ul class="pull-right">
         <li><a href="#">About</a></li>
@@ -13,7 +14,7 @@
   </div>
 
 <div class="Albums-near-me">
-<h1>Artists in Your Cloud: </h1>
+<h1>Artists in {{name}} Cloud: </h1>
 <div class="container-fluid">
     <div class="row-fluid">
       <div class="span4 horizontal">

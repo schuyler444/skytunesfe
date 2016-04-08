@@ -409,3 +409,30 @@ img {
     filter: alpha(opacity=0);
 }
 
+/*------------------Friendspage------------------------------------------------------*/
+
+.friendsGrid{
+background-color: #efefef;
+
+}
+
+.friendsGrid img{
+
+    width:  150px;
+    height: 150px;
+
+    padding right: 5px;
+}
+
+.friendName{
+  color: #5a5a5a;
+  text-decoration: none;
+
+}
+
+.friendName:hover {
+     color:#5a5a5a; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
